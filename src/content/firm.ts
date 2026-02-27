@@ -34,6 +34,7 @@ export type Partner = {
   qualifications: string;
   bio: string;
   expertise: string;
+  image: string;
 };
 
 export type Office = {
@@ -168,7 +169,8 @@ export const partners: Partner[] = [
     qualifications: 'M.COM., A.C.A.',
     bio: 'A visionary Chartered Accountant, CA Akshay Mandage leads with extensive expertise in Audit, Taxation, and Financial Management. He has cultivated his profound skills through impactful roles at esteemed CA firms in Pune, where he adeptly spearheaded Statutory Audits, Internal Audits, and comprehensive Financial Reviews. His work has driven success for clients across diverse sectors, including manufacturing, trading, and dynamic service industries, consistently delivering clarity and strategic advantage.',
     expertise:
-      'CA Akshay Mandage excels in mastering complex Direct Tax Assessments, ensuring stringent Transfer Pricing adherence and regulatory excellence, streamlining GST compliance, delivering accurate RERA reporting, and providing high-impact Financial Analysis (MIS) that empowers data-driven strategic decisions and fosters sustainable business growth.'
+      'CA Akshay Mandage excels in mastering complex Direct Tax Assessments, ensuring stringent Transfer Pricing adherence and regulatory excellence, streamlining GST compliance, delivering accurate RERA reporting, and providing high-impact Financial Analysis (MIS) that empowers data-driven strategic decisions and fosters sustainable business growth.',
+    image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=800'
   },
   {
     name: 'CA Vijay Chitari',
@@ -176,7 +178,8 @@ export const partners: Partner[] = [
     qualifications: 'B.COM., A.C.A.',
     bio: 'A rapidly ascending Chartered Accountant, CA Vijay Chitari has swiftly carved a niche with over two years of intensive post-qualification experience, excelling in sophisticated Taxation and Financial Management. His career trajectory showcases pivotal tenures at globally acclaimed firms like Kalyaniwalla & Mistry LLP (Mazars India) and B B S R & Associates (KPMG India) in Pune, where he rapidly cultivated a profound grasp of intricate financial landscapes and specialized tax frameworks, driving significant value for clients.',
     expertise:
-      'CA Vijay Chitari demonstrates exceptional proficiency in handling intricate Indirect Tax Assessments and representation, ensuring rigorous GST compliance, managing meticulous RERA-related reporting, and leveraging data-driven Financial Analysis (MIS) to provide actionable insights for strategic financial planning and optimized outcomes.'
+      'CA Vijay Chitari demonstrates exceptional proficiency in handling intricate Indirect Tax Assessments and representation, ensuring rigorous GST compliance, managing meticulous RERA-related reporting, and leveraging data-driven Financial Analysis (MIS) to provide actionable insights for strategic financial planning and optimized outcomes.',
+    image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=800'
   },
   {
     name: 'CA Pushkar Joshi',
@@ -184,7 +187,8 @@ export const partners: Partner[] = [
     qualifications: 'B.COM., A.C.A., C.F.E. (ACFE, USA)',
     bio: 'Possessing a powerful dual qualification as a Chartered Accountant and Certified Fraud Examiner, CA Pushkar Joshi brings over two years of intensive post-qualification experience. His career began with impactful tenures at esteemed firms like MSKA & Associates (BDO India) and Mahajan & Aibara Chartered Accountants LLP, where he swiftly developed a strong foundation in forensic investigation and financial assurance.',
     expertise:
-      'CA Pushkar Joshi leads Forensic Investigations, specializing in comprehensive Fraud Risk Assessments to fortify organizational integrity, and demonstrates expertise in the analysis of Electronically Stored Information during Mobile Forensics and Computer Forensics. He also excels in rigorous Statutory Audits (IND-AS/Schedule III) and meticulous reviews of Internal Financial Controls (IFC), ensuring compliance and operational resilience.'
+      'CA Pushkar Joshi leads Forensic Investigations, specializing in comprehensive Fraud Risk Assessments to fortify organizational integrity, and demonstrates expertise in the analysis of Electronically Stored Information during Mobile Forensics and Computer Forensics. He also excels in rigorous Statutory Audits (IND-AS/Schedule III) and meticulous reviews of Internal Financial Controls (IFC), ensuring compliance and operational resilience.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&h=800&auto=format&fit=crop'
   },
   {
     name: 'CA Rohan Patil',
@@ -192,7 +196,8 @@ export const partners: Partner[] = [
     qualifications: 'B.COM., A.C.A.',
     bio: 'A highly adept professional, CA Rohan Patil leverages extensive experience from PriceWaterhouse & Co LLP, where he consistently demonstrated excellence in navigating intricate multinational tax matters and ensuring robust transfer pricing compliance. His distinguished track record showcases a profound ability to manage complex projects, apply meticulous attention to detail, and strategically enhance operational efficiency for clients operating across global landscapes.',
     expertise:
-      'CA Rohan Patil excels in orchestrating Transfer Pricing compliance for multinational enterprises, masterfully handling Globally Coordinated Documentation (OECD), expertly managing Transfer Pricing litigation, structuring Advance Pricing Agreements, and providing incisive strategic advisory on complex areas such as ESOP cost treatment and entity recharacterization.'
+      'CA Rohan Patil excels in orchestrating Transfer Pricing compliance for multinational enterprises, masterfully handling Globally Coordinated Documentation (OECD), expertly managing Transfer Pricing litigation, structuring Advance Pricing Agreements, and providing incisive strategic advisory on complex areas such as ESOP cost treatment and entity recharacterization.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800'
   }
 ];
 

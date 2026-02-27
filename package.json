@@ -6,7 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
-    "dev": "next dev",
+    "clean:next": "node -e \"const fs=require('fs'); fs.rmSync('.next',{recursive:true,force:true});\"",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,6 +16,7 @@
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.542.0",
+    "motion": "^12.34.3",
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

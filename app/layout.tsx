@@ -14,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <div className="cyanotype-bg" aria-hidden="true">
+          <div className="cyanotype-drift-layer" />
+        </div>
+        <div className="cyanotype-grain-overlay" aria-hidden="true" />
+        <div className="site-content">{children}</div>
+      </body>
     </html>
   );
 }
