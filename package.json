@@ -8,6 +8,7 @@
   "scripts": {
     "clean:next": "node -e \"const fs=require('fs'); fs.rmSync('.next',{recursive:true,force:true});\"",
     "dev": "next dev --turbopack",
+    "dev:fresh": "npm run clean:next && next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

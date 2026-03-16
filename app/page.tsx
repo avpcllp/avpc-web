@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { TextRotate } from '@/components/ui/text-rotate';
+import { useEffect, useState } from 'react';
 import { firm, offices, partners, services, specializedOfferings } from '@/content/firm';
+import { BrandLogo } from '@/components/brand-logo';
 
 export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('.reveal-on-scroll'));
 
@@ -23,6 +25,7 @@ export default function Home() {
     elements.forEach((el) => observer.observe(el));
 
     const onScroll = () => {
+      setScrolled(window.scrollY > 20);
       const heroText = document.querySelector<HTMLElement>('#hero-title');
       if (!heroText) return;
       heroText.style.transform = `translateY(${window.scrollY * 0.12}px)`;
@@ -45,16 +48,20 @@ export default function Home() {
         Skip to main content
       </a>
 
-      <header className="fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 py-8 md:px-12">
-        <div className="font-[var(--font-heading)] text-[14px] font-bold uppercase tracking-tight md:text-[16px]">
+      <header
+        className={`fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 py-6 transition-all duration-300 md:px-12 ${scrolled ? 'bg-[var(--marble-white)] py-4 shadow-sm' : 'bg-transparent py-8'
+          }`}
+      >
+        <div
+          className={`font-[var(--font-heading)] text-[14px] font-bold uppercase tracking-tight text-[#a34e24] transition-all duration-500 md:text-[16px] ${scrolled ? 'opacity-100' : 'pointer-events-none opacity-0'
+            }`}
+        >
           {firm.legalName}
           <br />
           Chartered Accountants
-          <br />
-          Pune / Kolhapur
         </div>
         <nav aria-label="Primary" className="text-right">
-          <ul className="list-none space-y-2 font-[var(--font-heading)] text-[13px] uppercase tracking-wide md:text-[15px]">
+          <ul className="list-none space-y-2 font-[var(--font-heading)] text-[13px] uppercase tracking-wide text-[#a34e24] md:text-[15px]">
             <li>
               <a href="#about" className="transition-opacity hover:opacity-40">
                 The Practice
@@ -80,33 +87,22 @@ export default function Home() {
       </header>
 
       <main id="main-content" className="pt-24 md:pt-28">
-        <section className="flex min-h-screen items-center px-6 md:px-12">
-          <div className="grid w-full grid-cols-12 gap-5">
-            <h1
-              id="hero-title"
-              className="col-span-12 mt-10 font-[var(--font-body)] text-[3.1rem] font-black uppercase leading-[0.85] tracking-[-0.05em] sm:text-[5rem] lg:col-span-8 lg:text-[8.6rem]"
-            >
-              Structured Chartered Accountancy for
-              <br />
-              <TextRotate
-                texts={['Audit', 'Tax', 'Risk']}
-                mainClassName="inline-flex overflow-hidden rounded-md bg-black px-3 py-1 text-white align-top"
-                splitLevelClassName="overflow-hidden"
-                rotationInterval={2200}
-                staggerDuration={0.015}
-                staggerFrom="first"
-                initial={{ y: '105%', opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: '-110%', opacity: 0 }}
-              />
-            </h1>
-            <p className="reveal-on-scroll anim-text col-span-12 self-end border-t border-black pt-4 font-[var(--font-heading)] text-[12px] uppercase tracking-wide sm:text-[13px] lg:col-span-4 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
-              [INDIAN CHARTERED ACCOUNTANCY]
-              <br />
-              {firm.displayName}
-              <br />
-              Established {firm.established}
-            </p>
+        <section className="flex min-h-[90vh] items-center px-6 md:px-12">
+          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center pt-8 md:pt-12">
+            <div className="reveal-on-scroll">
+              <BrandLogo />
+            </div>
+
+            <div className="mt-16 grid w-full grid-cols-12 gap-5 border-t border-[#a34e24]/20 pt-8">
+              <div className="col-span-12 lg:col-span-8">
+                <p className="max-w-2xl font-[var(--font-body)] text-[1.05rem] leading-relaxed tracking-[0.02em] text-[#7d4423] md:text-[1.35rem]">
+                  Future-ready chartered accountancy for assurance, taxation, regulatory compliance, and forensic advisory.
+                </p>
+              </div>
+              <p className="reveal-on-scroll anim-text col-span-12 self-end font-[var(--font-body)] text-[0.95rem] font-semibold uppercase tracking-[0.12em] text-[#a34e24] sm:text-[1rem] lg:col-span-4 lg:border-l lg:border-[#a34e24]/20 lg:pl-5">
+                Established {firm.established}
+              </p>
+            </div>
           </div>
         </section>
 
@@ -161,9 +157,6 @@ export default function Home() {
             <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">
               Our Specialized Service Offerings
             </p>
-            <h2 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-6xl">
-              Assurance / Taxation / Advisory
-            </h2>
             <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">
               A V P C & CO LLP delivers high-value professional services across the domains of Assurance, Taxation, and Advisory, leveraging the partners&apos; extensive experience and commitment to technical excellence.
             </p>
@@ -192,8 +185,12 @@ export default function Home() {
         <section className="bg-white px-6 py-20 md:px-12 md:py-24">
           <div className="reveal-on-scroll anim-text mb-8 flex items-center justify-between border-b-2 border-black pb-3 font-[var(--font-heading)] text-[11px] uppercase tracking-[0.18em]">
             <span>What We Offer</span>
-            <span>Service Matrix</span>
+            <span>Services</span>
           </div>
+
+          <p className="reveal-on-scroll anim-text mb-8 max-w-4xl text-[15px] leading-relaxed text-[#272727]">
+            Comprehensive professional services designed to meet the evolving needs of modern businesses across assurance, taxation, advisory, and compliance domains.
+          </p>
 
           {services.map((group, index) => (
             <div
@@ -203,7 +200,7 @@ export default function Home() {
             >
               <div className="max-w-md">
                 <h3 className="text-2xl font-bold uppercase tracking-tight">{group.title}</h3>
-                <p className="mt-2 text-sm text-[#444]">{group.description}</p>
+                {group.description ? <p className="mt-2 text-sm text-[#444]">{group.description}</p> : null}
               </div>
               <ul className="grid w-full gap-2 md:max-w-2xl md:grid-cols-2">
                 {group.items.map((item) => (
@@ -217,9 +214,9 @@ export default function Home() {
         </section>
 
         <section id="leadership" className="bg-[#f9f9f9] px-6 py-20 md:px-12 md:py-24">
-          <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Leadership / Our Team</p>
+          <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Leadership</p>
           <h2 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-6xl">
-            Experienced Professionals
+            Our Team
           </h2>
           <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">{firm.teamIntro}</p>
 
@@ -234,7 +231,7 @@ export default function Home() {
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="aspect-[4/3] w-full object-cover object-top"
+                    className="aspect-[4/5] w-full object-cover object-top"
                     loading="lazy"
                   />
                 </div>
@@ -285,27 +282,32 @@ export default function Home() {
                     Email: <a href={`mailto:${office.email}`}>{office.email}</a>
                   </p>
                 ) : null}
+                {office.website ? (
+                  <p className="mt-2 font-[var(--font-heading)] text-[12px] uppercase tracking-wide">
+                    Website: <a href={`https://${office.website}`}>{office.website}</a>
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>
         </section>
       </main>
 
-      <footer className="m-6 grid grid-cols-1 gap-8 bg-[#111] px-6 py-12 text-white shadow-[0px_50px_100px_rgba(0,0,0,0.2)] md:m-12 md:grid-cols-2 md:px-10 md:py-16">
+      <footer className="m-6 grid grid-cols-1 gap-8 bg-[#2b1a10] px-6 py-12 text-white shadow-[0px_50px_100px_rgba(0,0,0,0.2)] md:m-12 md:grid-cols-2 md:px-10 md:py-16">
         <div>
-          <div className="font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-5xl">
+          <div className="font-[var(--font-body)] text-4xl font-black uppercase tracking-tight text-[#fdfcf0] md:text-5xl">
             A V P C
             <br />
             & CO LLP
           </div>
-          <p className="mt-8 font-[var(--font-heading)] text-[11px] uppercase tracking-[0.16em] opacity-60">
+          <p className="mt-8 font-[var(--font-heading)] text-[11px] uppercase tracking-[0.16em] text-[#fdfcf0]/60">
             Pune / Kolhapur
             <br />
             {new Date().getFullYear()} Regulated by ICAI
           </p>
         </div>
 
-        <div className="flex flex-col justify-between border border-white/20 p-8 transition-colors hover:bg-white hover:text-black">
+        <div className="flex flex-col justify-between border border-white/20 p-8 transition-colors hover:bg-[#fdfcf0] hover:text-[#2b1a10]">
           <p className="text-2xl font-bold">Ready to solidify your financial infrastructure?</p>
           <div className="mt-8 space-y-2 font-[var(--font-heading)] text-xs uppercase tracking-[0.16em]">
             <Link href="/initiate-consultation" className="block">

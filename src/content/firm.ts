@@ -42,6 +42,7 @@ export type Office = {
   addressLines: string[];
   phones: string[];
   email?: string;
+  website?: string;
 };
 
 export const firm: Firm = {
@@ -52,7 +53,7 @@ export const firm: Firm = {
   established: 'October 2025',
   foundationTitle: 'Our Foundation',
   about:
-    "A V P C & CO LLP, Chartered Accountants, established in October 2025, is a forward-thinking firm specializing in strategic tax advisory, risk mitigation, and forensic accounting. With a foundation built on agility and specialized expertise, we are committed to providing tailored solutions to meet the evolving financial, regulatory, and investigative needs of today's corporate world.",
+    "A V P C & CO LLP, Chartered Accountants, established in October 2025, is a forward-thinking firm specializing in strategic tax advisory, risk mitigation, and forensic accounting. With a foundation built on agility and specialized expertise, we are committed to providing tailored solutions to meet the evolving financial, regulatory, and investigative needs of today's corporate world. Our vision is to be the trusted, future-ready partner for businesses seeking expert guidance in complex financial and risk-related challenges.",
   vision:
     'To redefine the role of Chartered Accountants in the modern economy as strategic thinkers, ethical advisors, and innovation-driven professionals. We envision A V P C & CO LLP as a future-ready firm that empowers businesses to thrive through clarity, compliance, and confidence.',
   missionIntro: 'Our Mission',
@@ -92,28 +93,28 @@ export const specializedOfferings: ServiceGroup[] = [
     number: '01',
     title: 'Audit & Assurance',
     description:
-      'Independent and compliant financial oversight through Statutory Audits under the Companies Act, Tax Audits under the Income Tax Act, and specialized assurance engagements under Indirect Tax Laws including GST and VAT. Internal Audit Services focus on evaluating and strengthening internal controls, risk management frameworks, and overall governance processes.',
+      'Independent and compliant financial oversight through Statutory Audits under the Companies Act, Tax Audits under the Income Tax Act, and specialized assurance engagements under Indirect Tax Laws including GST and VAT. Our Internal Audit Services focus on evaluating and strengthening internal controls, risk management frameworks, and overall governance processes.',
     items: []
   },
   {
     number: '02',
     title: 'Forensics & Risk Advisory',
     description:
-      'A strategic core addressing contemporary needs for enhanced corporate integrity, governance, and compliance. The firm specializes in Forensic Accounting and Investigations, assisting clients in detection and prevention of fraud and financial irregularities. Fraud Risk Assessments enable clients to proactively identify vulnerabilities and implement effective control measures.',
+      'A strategic core addressing contemporary needs for enhanced corporate integrity, governance, and compliance. We specialize in Forensic Accounting and Investigations, assisting clients in the detection and prevention of fraud and financial irregularities. Our Fraud Risk Assessments enable clients to proactively identify vulnerabilities and implement effective control measures.',
     items: []
   },
   {
     number: '03',
     title: 'Taxation & Regulatory',
     description:
-      'Comprehensive advisory, planning, and compliance services across Direct and Indirect Taxes. The Taxation practice covers corporate and individual taxation, assessment representation, and litigation support. International Taxation includes cross-border structuring, transfer pricing, DTAA planning, and foreign remittance compliance.',
+      'Comprehensive advisory, planning, and compliance services across Direct and Indirect Taxes. Our Taxation practice covers corporate and individual taxation, assessment representation, and litigation support. The International Taxation division provides expertise in cross-border structuring, transfer pricing, DTAA planning, and foreign remittance compliance.',
     items: []
   },
   {
     number: '04',
     title: 'RERA Consulting',
     description:
-      'Dedicated services assisting developers, agents, and stakeholders in complying with the Real Estate (Regulation and Development) Act, including guidance on registration, certification, and regulatory compliance to ensure transparency and statutory adherence.',
+      'Dedicated services assisting developers, agents, and stakeholders in complying with the Real Estate (Regulation and Development) Act. This includes guidance on registration, certification, and regulatory compliance, ensuring transparency and adherence to statutory obligations.',
     items: []
   }
 ];
@@ -121,7 +122,7 @@ export const specializedOfferings: ServiceGroup[] = [
 export const services: ServiceGroup[] = [
   {
     title: 'Audit and Assurance',
-    description: 'Comprehensive professional services designed to meet evolving business needs.',
+    description: '',
     items: [
       { title: 'Statutory Audit' },
       { title: 'Internal Audit' },
@@ -132,7 +133,7 @@ export const services: ServiceGroup[] = [
   },
   {
     title: 'Taxation',
-    description: 'Direct and indirect tax advisory and compliance support.',
+    description: '',
     items: [
       { title: 'Direct Tax Advisory & Compliance' },
       { title: 'Indirect Tax (GST) Services - Advisory & Compliance' },
@@ -142,7 +143,7 @@ export const services: ServiceGroup[] = [
   },
   {
     title: 'Advisory',
-    description: 'Risk-focused and transaction-support advisory assignments.',
+    description: '',
     items: [
       { title: 'Forensic Accounting and Investigation' },
       { title: 'Fraud Risk Assessment' },
@@ -152,7 +153,7 @@ export const services: ServiceGroup[] = [
   },
   {
     title: 'Certifications',
-    description: 'Certification and regulatory reporting support.',
+    description: '',
     items: [
       { title: 'Form 15 CA / CB' },
       { title: 'Net Worth Certification' },
@@ -170,7 +171,7 @@ export const partners: Partner[] = [
     bio: 'A visionary Chartered Accountant, CA Akshay Mandage leads with extensive expertise in Audit, Taxation, and Financial Management. He has cultivated his profound skills through impactful roles at esteemed CA firms in Pune, where he adeptly spearheaded Statutory Audits, Internal Audits, and comprehensive Financial Reviews. His work has driven success for clients across diverse sectors, including manufacturing, trading, and dynamic service industries, consistently delivering clarity and strategic advantage.',
     expertise:
       'CA Akshay Mandage excels in mastering complex Direct Tax Assessments, ensuring stringent Transfer Pricing adherence and regulatory excellence, streamlining GST compliance, delivering accurate RERA reporting, and providing high-impact Financial Analysis (MIS) that empowers data-driven strategic decisions and fosters sustainable business growth.',
-    image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=800'
+    image: '/akshay.jpeg'
   },
   {
     name: 'CA Vijay Chitari',
@@ -179,7 +180,7 @@ export const partners: Partner[] = [
     bio: 'A rapidly ascending Chartered Accountant, CA Vijay Chitari has swiftly carved a niche with over two years of intensive post-qualification experience, excelling in sophisticated Taxation and Financial Management. His career trajectory showcases pivotal tenures at globally acclaimed firms like Kalyaniwalla & Mistry LLP (Mazars India) and B B S R & Associates (KPMG India) in Pune, where he rapidly cultivated a profound grasp of intricate financial landscapes and specialized tax frameworks, driving significant value for clients.',
     expertise:
       'CA Vijay Chitari demonstrates exceptional proficiency in handling intricate Indirect Tax Assessments and representation, ensuring rigorous GST compliance, managing meticulous RERA-related reporting, and leveraging data-driven Financial Analysis (MIS) to provide actionable insights for strategic financial planning and optimized outcomes.',
-    image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=800'
+    image: '/vijay.jpeg'
   },
   {
     name: 'CA Pushkar Joshi',
@@ -188,7 +189,7 @@ export const partners: Partner[] = [
     bio: 'Possessing a powerful dual qualification as a Chartered Accountant and Certified Fraud Examiner, CA Pushkar Joshi brings over two years of intensive post-qualification experience. His career began with impactful tenures at esteemed firms like MSKA & Associates (BDO India) and Mahajan & Aibara Chartered Accountants LLP, where he swiftly developed a strong foundation in forensic investigation and financial assurance.',
     expertise:
       'CA Pushkar Joshi leads Forensic Investigations, specializing in comprehensive Fraud Risk Assessments to fortify organizational integrity, and demonstrates expertise in the analysis of Electronically Stored Information during Mobile Forensics and Computer Forensics. He also excels in rigorous Statutory Audits (IND-AS/Schedule III) and meticulous reviews of Internal Financial Controls (IFC), ensuring compliance and operational resilience.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&h=800&auto=format&fit=crop'
+    image: '/pushkaraj.jpeg'
   },
   {
     name: 'CA Rohan Patil',
@@ -197,7 +198,7 @@ export const partners: Partner[] = [
     bio: 'A highly adept professional, CA Rohan Patil leverages extensive experience from PriceWaterhouse & Co LLP, where he consistently demonstrated excellence in navigating intricate multinational tax matters and ensuring robust transfer pricing compliance. His distinguished track record showcases a profound ability to manage complex projects, apply meticulous attention to detail, and strategically enhance operational efficiency for clients operating across global landscapes.',
     expertise:
       'CA Rohan Patil excels in orchestrating Transfer Pricing compliance for multinational enterprises, masterfully handling Globally Coordinated Documentation (OECD), expertly managing Transfer Pricing litigation, structuring Advance Pricing Agreements, and providing incisive strategic advisory on complex areas such as ESOP cost treatment and entity recharacterization.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800'
+    image: '/rohan.jpeg'
   }
 ];
 
@@ -205,17 +206,17 @@ export const offices: Office[] = [
   {
     name: 'Head Office',
     addressLines: [
-      'Royal Pearl, 2nd Floor',
-      'Third Lane, Shahupuri',
-      'Kolhapur, Maharashtra - 416001'
+      'Krisala 41 Elite,',
+      'Tathawade, Pimpri-Chinchwad,',
+      'Pune, Maharashtra - 411 033'
     ],
-    phones: ['+91 8983101011'],
-    email: 'avpcllp@gmail.com'
+    phones: ['+ 91 9145522100', '+91 8329070657']
   },
   {
     name: 'Branch Office',
-    addressLines: ['Pimpri Chinchwad, Pune', 'Maharashtra'],
-    phones: ['+91 9145522100', '+91 8329070657'],
-    email: 'avpcllp@gmail.com'
+    addressLines: ['Royal Pearl,', 'Third Lane, Shahupuri', 'Kolhapur, Maharashtra - 416 001'],
+    phones: ['+91 8983101011'],
+    email: 'avpcllp@gmail.com',
+    website: 'www.avpcllp.com'
   }
 ];

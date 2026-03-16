@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --marble-white: #ffffff;
-  --marble-vein: #f2f2f2;
-  --stone-shadow: rgba(0, 0, 0, 0.08);
+  --marble-white: #fdfcf0; /* Cream/Off-white background from image */
+  --marble-vein: #f2f1e6;
+  --stone-shadow: rgba(60, 30, 10, 0.08); /* Warmer shadow */
   --chisel-edge: rgba(255, 255, 255, 0.8);
-  --deep-ink: #111111;
-  --monolith-bg: #f9f9f9;
-  --accent-gold: #b3a27f;
+  --deep-ink: #2b1a10; /* Dark brown for text */
+  --monolith-bg: #f7f6e7;
+  --accent-gold: #a34e24; /* Primary brown/orange from logo */
+  --accent-blue: #1b4f8c; /* CA Blue */
   --font-body: Inter, "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-heading: "Space Mono", "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -33,33 +34,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.cyanotype-bg {
+.brand-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, #e8f1f5 0%, #ffffff 100%);
+  background-color: var(--marble-white);
 }
 
-.cyanotype-drift-layer {
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: -25%;
-  left: -25%;
-  filter: blur(80px);
-  background-image:
-    radial-gradient(ellipse at 20% 30%, rgb(0 43 91 / 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgb(26 95 122 / 0.10) 0%, transparent 50%);
-  animation: drift-rotate 30s linear infinite;
-}
-
-.cyanotype-grain-overlay {
+.brand-grain-overlay {
   position: fixed;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.15;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
