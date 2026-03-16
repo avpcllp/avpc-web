@@ -49,11 +49,11 @@ export default function Home() {
       </a>
 
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 py-6 transition-all duration-300 md:px-12 ${scrolled ? 'bg-[var(--marble-white)] py-4 shadow-sm' : 'bg-transparent py-8'
+        className={`fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 py-6 transition-all duration-300 md:px-12 ${scrolled ? 'bg-[rgba(252,248,238,0.92)] py-4 shadow-[0_10px_30px_rgba(60,30,10,0.06)] backdrop-blur-sm' : 'bg-transparent py-8'
           }`}
       >
         <div
-          className={`font-[var(--font-heading)] text-[14px] font-bold uppercase tracking-tight text-[#a34e24] transition-all duration-500 md:text-[16px] ${scrolled ? 'opacity-100' : 'pointer-events-none opacity-0'
+          className={`font-[var(--font-body)] text-[14px] font-bold uppercase tracking-[0.18em] text-[#a34e24] transition-all duration-500 md:text-[16px] ${scrolled ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
         >
           {firm.legalName}
@@ -61,7 +61,7 @@ export default function Home() {
           Chartered Accountants
         </div>
         <nav aria-label="Primary" className="text-right">
-          <ul className="list-none space-y-2 font-[var(--font-heading)] text-[13px] uppercase tracking-wide text-[#a34e24] md:text-[15px]">
+          <ul className="list-none space-y-2 font-[var(--font-body)] text-[13px] font-semibold uppercase tracking-[0.16em] text-[#a34e24] md:text-[15px]">
             <li>
               <a href="#about" className="transition-opacity hover:opacity-40">
                 The Practice
@@ -79,7 +79,7 @@ export default function Home() {
             </li>
             <li>
               <a href="#contact" className="transition-opacity hover:opacity-40">
-                Inquiry
+                Contact us
               </a>
             </li>
           </ul>
@@ -87,15 +87,15 @@ export default function Home() {
       </header>
 
       <main id="main-content" className="pt-24 md:pt-28">
-        <section className="flex min-h-[90vh] items-center px-6 md:px-12">
+        <section className="theme-section flex min-h-[90vh] items-center px-6 md:px-12">
           <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center pt-8 md:pt-12">
             <div className="reveal-on-scroll">
               <BrandLogo />
             </div>
 
-            <div className="mt-16 grid w-full grid-cols-12 gap-5 border-t border-[#a34e24]/20 pt-8">
+            <div className="theme-rule mt-16 grid w-full grid-cols-12 gap-5 border-t pt-8">
               <div className="col-span-12 lg:col-span-8">
-                <p className="max-w-2xl font-[var(--font-body)] text-[1.05rem] leading-relaxed tracking-[0.02em] text-[#7d4423] md:text-[1.35rem]">
+                <p className="theme-body max-w-2xl font-[var(--font-body)] text-[1.05rem] leading-relaxed tracking-[0.02em] md:text-[1.35rem]">
                   Future-ready chartered accountancy for assurance, taxation, regulatory compliance, and forensic advisory.
                 </p>
               </div>
@@ -106,45 +106,47 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="bg-[#f9f9f9] px-6 py-20 md:px-12 md:py-24">
-          <div className="mb-10 border-b border-[#e5e5e5] pb-6">
-            <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Who We Are</p>
-            <h2 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-6xl">
+        <section id="about" className="theme-section px-6 py-20 md:px-12 md:py-24">
+          <div className="theme-rule mb-10 border-b pb-6 text-center">
+            <p className="theme-label reveal-on-scroll anim-text">Who We Are</p>
+            <h2 className="theme-heading reveal-on-scroll anim-text mt-2 text-4xl md:text-6xl">
               About Us
             </h2>
-            <p className="reveal-on-scroll anim-text mt-5 font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#b3a27f]">
+            <p className="theme-label reveal-on-scroll anim-text mt-5 text-[0.78rem]">
               {firm.foundationTitle}
             </p>
-            <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">{firm.about}</p>
+            <p className="theme-body reveal-on-scroll anim-text mx-auto mt-4 max-w-4xl text-[15px] leading-relaxed">
+              {firm.about}
+            </p>
           </div>
 
-          <div className="mb-8">
-            <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Our Purpose</p>
-            <h3 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-3xl font-black uppercase tracking-tight md:text-5xl">
+          <div className="mb-8 text-center">
+            <p className="theme-label reveal-on-scroll anim-text">Our Purpose</p>
+            <h3 className="theme-heading reveal-on-scroll anim-text mt-2 text-3xl md:text-5xl">
               Vision & Mission
             </h3>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
-            <article className="reveal-on-scroll anim-card overflow-hidden border border-[#efefef] bg-white p-8 shadow-[1px_1px_0px_rgba(255,255,255,0.8),5px_5px_15px_rgba(0,0,0,0.08)]">
-              <span className="mb-6 block font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#b3a27f]">
+            <article className="theme-panel reveal-on-scroll anim-card overflow-hidden p-8">
+              <span className="theme-label mb-6 block text-[0.78rem]">
                 Our Vision
               </span>
-              <p className="text-[15px] leading-relaxed text-[#222]">{firm.vision}</p>
+              <p className="theme-body text-[15px] leading-relaxed">{firm.vision}</p>
             </article>
 
             <article
-              className="reveal-on-scroll anim-card overflow-hidden border border-[#efefef] bg-white p-8 shadow-[1px_1px_0px_rgba(255,255,255,0.8),5px_5px_15px_rgba(0,0,0,0.08)]"
+              className="theme-panel reveal-on-scroll anim-card overflow-hidden p-8"
               style={{ transitionDelay: '120ms' }}
             >
-              <span className="mb-6 block font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#b3a27f]">
+              <span className="theme-label mb-6 block text-[0.78rem]">
                 Our Mission
               </span>
               <div className="space-y-4">
                 {firm.mission.map((item) => (
                   <div key={item.title}>
-                    <h3 className="text-sm font-bold uppercase tracking-wide">{item.title}</h3>
-                    <p className="mt-1 text-[14px] text-[#333]">{item.description}</p>
+                    <h3 className="text-sm font-bold uppercase tracking-[0.08em] text-[#7d4423]">{item.title}</h3>
+                    <p className="theme-body mt-1 text-[14px]">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -152,13 +154,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" className="bg-[#f9f9f9] px-6 py-20 md:px-12 md:py-24">
+        <section id="services" className="theme-section px-6 py-20 md:px-12 md:py-24">
           <div className="mb-8">
-            <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">
+            <p className="theme-label reveal-on-scroll anim-text">
               Our Specialized Service Offerings
             </p>
-            <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">
-              A V P C & CO LLP delivers high-value professional services across the domains of Assurance, Taxation, and Advisory, leveraging the partners&apos; extensive experience and commitment to technical excellence.
+            <p className="theme-body reveal-on-scroll anim-text mt-4 max-w-[90rem] text-[0.9rem] leading-relaxed md:text-[0.98rem] xl:whitespace-nowrap">
+              A V P C & CO LLP delivers high-value professional services across the domains of Assurance, Taxation, and Advisory, leveraging the partners extensive experience and commitment to technical excellence.
             </p>
           </div>
 
@@ -166,45 +168,45 @@ export default function Home() {
             {specializedOfferings.map((offering, index) => (
               <article
                 key={offering.title}
-                className="reveal-on-scroll anim-card relative overflow-hidden border border-[#efefef] bg-white p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[1px_1px_0px_rgba(255,255,255,0.8),20px_30px_50px_rgba(0,0,0,0.07)]"
+                className="theme-panel reveal-on-scroll anim-card relative overflow-hidden p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_55px_rgba(75,41,20,0.12)]"
                 style={{ transitionDelay: `${index * 90}ms` }}
               >
-                <span className="mb-8 block font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#b3a27f]">
+                <span className="theme-label mb-8 block text-[0.78rem]">
                   {offering.number} / {offering.title}
                 </span>
-                <p className="text-[14px] leading-relaxed text-[#2b2b2b]">{offering.description}</p>
+                <p className="theme-body text-[14px] leading-relaxed">{offering.description}</p>
                 <span
                   aria-hidden="true"
-                  className="absolute right-0 top-0 h-10 w-10 bg-[linear-gradient(225deg,#eee_50%,transparent_50%)]"
+                  className="absolute right-0 top-0 h-10 w-10 bg-[linear-gradient(225deg,rgba(163,78,36,0.12)_50%,transparent_50%)]"
                 />
               </article>
             ))}
           </div>
         </section>
 
-        <section className="bg-white px-6 py-20 md:px-12 md:py-24">
-          <div className="reveal-on-scroll anim-text mb-8 flex items-center justify-between border-b-2 border-black pb-3 font-[var(--font-heading)] text-[11px] uppercase tracking-[0.18em]">
+        <section className="theme-section px-6 py-20 md:px-12 md:py-24">
+          <div className="theme-rule reveal-on-scroll anim-text mb-8 flex items-center justify-between border-b pb-3 font-[var(--font-body)] text-[0.95rem] font-bold uppercase tracking-[0.18em] text-[#a34e24] md:text-[1.15rem]">
             <span>What We Offer</span>
             <span>Services</span>
           </div>
 
-          <p className="reveal-on-scroll anim-text mb-8 max-w-4xl text-[15px] leading-relaxed text-[#272727]">
+          <p className="theme-body reveal-on-scroll anim-text mb-8 max-w-[90rem] text-[0.9rem] leading-relaxed md:text-[0.98rem] xl:whitespace-nowrap">
             Comprehensive professional services designed to meet the evolving needs of modern businesses across assurance, taxation, advisory, and compliance domains.
           </p>
 
           {services.map((group, index) => (
             <div
               key={group.title}
-              className="reveal-on-scroll anim-card flex flex-col gap-4 border-b border-[#eee] py-6 transition-all duration-300 hover:bg-[#f2f2f2] md:flex-row md:items-start md:justify-between md:px-4"
+              className="theme-rule reveal-on-scroll anim-card flex flex-col gap-4 border-b py-6 transition-all duration-300 hover:bg-[rgba(255,255,255,0.35)] md:flex-row md:items-start md:justify-between md:px-4"
               style={{ transitionDelay: `${index * 90}ms` }}
             >
               <div className="max-w-md">
-                <h3 className="text-2xl font-bold uppercase tracking-tight">{group.title}</h3>
-                {group.description ? <p className="mt-2 text-sm text-[#444]">{group.description}</p> : null}
+                <h3 className="theme-heading text-2xl">{group.title}</h3>
+                {group.description ? <p className="theme-body mt-2 text-sm">{group.description}</p> : null}
               </div>
               <ul className="grid w-full gap-2 md:max-w-2xl md:grid-cols-2">
                 {group.items.map((item) => (
-                  <li key={item.title} className="font-[var(--font-heading)] text-[12px] uppercase tracking-wide text-[#222]">
+                  <li key={item.title} className="font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.14em] text-[#6f3c20]">
                     {item.title}
                   </li>
                 ))}
@@ -213,21 +215,23 @@ export default function Home() {
           ))}
         </section>
 
-        <section id="leadership" className="bg-[#f9f9f9] px-6 py-20 md:px-12 md:py-24">
-          <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Leadership</p>
-          <h2 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-6xl">
+        <section id="leadership" className="theme-section px-6 py-20 md:px-12 md:py-24">
+          <p className="theme-label reveal-on-scroll anim-text">Leadership</p>
+          <h2 className="theme-heading reveal-on-scroll anim-text mt-2 text-4xl md:text-6xl">
             Our Team
           </h2>
-          <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">{firm.teamIntro}</p>
+          <p className="theme-body reveal-on-scroll anim-text mt-4 max-w-[90rem] text-[0.9rem] leading-relaxed md:text-[0.98rem] xl:whitespace-nowrap">
+            {firm.teamIntro}
+          </p>
 
           <div className="reveal-on-scroll mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {partners.map((partner, index) => (
               <article
                 key={partner.name}
-                className="reveal-on-scroll anim-card overflow-hidden border border-[#efefef] bg-white p-6 shadow-[1px_1px_0px_rgba(255,255,255,0.8),5px_5px_15px_rgba(0,0,0,0.08)]"
+                className="theme-panel reveal-on-scroll anim-card overflow-hidden p-6"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="mb-5 overflow-hidden rounded-xl bg-[#efefef]">
+                <div className="mb-5 overflow-hidden rounded-xl bg-[rgba(163,78,36,0.06)]">
                   <img
                     src={partner.image}
                     alt={partner.name}
@@ -235,13 +239,13 @@ export default function Home() {
                     loading="lazy"
                   />
                 </div>
-                <h3 className="text-2xl font-bold uppercase tracking-tight">{partner.name}</h3>
-                <p className="mt-1 font-[var(--font-heading)] text-xs uppercase tracking-[0.16em] text-[#666]">
+                <h3 className="theme-heading text-2xl">{partner.name}</h3>
+                <p className="mt-1 font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.14em] text-[#8e5a39]">
                   {partner.title} / {partner.qualifications}
                 </p>
-                <p className="mt-5 text-[14px] leading-relaxed text-[#2b2b2b]">{partner.bio}</p>
-                <p className="mt-4 border-t border-[#ececec] pt-4 text-[14px] leading-relaxed text-[#2b2b2b]">
-                  <span className="font-bold uppercase">Expertise: </span>
+                <p className="theme-body mt-5 text-[14px] leading-relaxed">{partner.bio}</p>
+                <p className="theme-body theme-rule mt-4 border-t pt-4 text-[14px] leading-relaxed">
+                  <span className="font-bold uppercase text-[#6f3c20]">Expertise: </span>
                   {partner.expertise}
                 </p>
               </article>
@@ -249,12 +253,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="bg-white px-6 py-20 md:px-12 md:py-24">
-          <p className="reveal-on-scroll anim-text font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#777]">Get In Touch</p>
-          <h2 className="reveal-on-scroll anim-text mt-2 font-[var(--font-body)] text-4xl font-black uppercase tracking-tight md:text-6xl">
+        <section id="contact" className="theme-section px-6 py-20 md:px-12 md:py-24">
+          <p className="theme-label reveal-on-scroll anim-text">Get In Touch</p>
+          <h2 className="theme-heading reveal-on-scroll anim-text mt-2 text-4xl md:text-6xl">
             Contact Us
           </h2>
-          <p className="reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed text-[#272727]">
+          <p className="theme-body reveal-on-scroll anim-text mt-4 max-w-5xl text-[15px] leading-relaxed">
             Ready to partner with a future-ready accounting firm? Reach out to us at either of our convenient locations.
           </p>
 
@@ -262,28 +266,28 @@ export default function Home() {
             {offices.map((office, index) => (
               <article
                 key={office.name}
-                className="reveal-on-scroll anim-card border border-[#efefef] bg-[#f9f9f9] p-8 shadow-[1px_1px_0px_rgba(255,255,255,0.8),5px_5px_15px_rgba(0,0,0,0.08)]"
+                className="theme-panel reveal-on-scroll anim-card p-8"
                 style={{ transitionDelay: `${index * 120}ms` }}
               >
-                <p className="font-[var(--font-heading)] text-xs uppercase tracking-[0.18em] text-[#b3a27f]">{office.name}</p>
-                <p className="mt-4 font-[var(--font-heading)] text-xs uppercase tracking-[0.16em] text-[#666]">Legal Name</p>
-                <p className="mt-4 font-[var(--font-body)] text-lg font-bold uppercase">{firm.legalName}</p>
-                <p className="font-[var(--font-heading)] text-xs uppercase tracking-[0.16em]">Chartered Accountants</p>
-                <address className="mt-4 not-italic text-[14px] leading-relaxed text-[#2b2b2b]">
+                <p className="theme-label text-[0.78rem]">{office.name}</p>
+                <p className="mt-4 font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em] text-[#8e5a39]">Legal Name</p>
+                <p className="mt-4 font-[var(--font-body)] text-lg font-bold uppercase text-[#a34e24]">{firm.legalName}</p>
+                <p className="font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em] text-[#8e5a39]">Chartered Accountants</p>
+                <address className="theme-body mt-4 not-italic text-[14px] leading-relaxed">
                   {office.addressLines.map((line) => (
                     <div key={line}>{line}</div>
                   ))}
                 </address>
-                <p className="mt-4 font-[var(--font-heading)] text-[12px] uppercase tracking-wide">
+                <p className="mt-4 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.14em] text-[#6f3c20]">
                   Mobile: {office.phones.join(' | ')}
                 </p>
                 {office.email ? (
-                  <p className="mt-2 font-[var(--font-heading)] text-[12px] uppercase tracking-wide">
+                  <p className="mt-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.14em] text-[#6f3c20]">
                     Email: <a href={`mailto:${office.email}`}>{office.email}</a>
                   </p>
                 ) : null}
                 {office.website ? (
-                  <p className="mt-2 font-[var(--font-heading)] text-[12px] uppercase tracking-wide">
+                  <p className="mt-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.14em] text-[#6f3c20]">
                     Website: <a href={`https://${office.website}`}>{office.website}</a>
                   </p>
                 ) : null}
@@ -293,23 +297,23 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="m-6 grid grid-cols-1 gap-8 bg-[#2b1a10] px-6 py-12 text-white shadow-[0px_50px_100px_rgba(0,0,0,0.2)] md:m-12 md:grid-cols-2 md:px-10 md:py-16">
+      <footer className="m-6 grid grid-cols-1 gap-8 border border-[#a34e24]/15 bg-[linear-gradient(180deg,#8d431f_0%,#6f3419_100%)] px-6 py-12 text-white shadow-[0px_30px_70px_rgba(75,41,20,0.22)] md:m-12 md:grid-cols-2 md:px-10 md:py-16">
         <div>
-          <div className="font-[var(--font-body)] text-4xl font-black uppercase tracking-tight text-[#fdfcf0] md:text-5xl">
-            A V P C
-            <br />
+          <div className="font-[var(--font-body)] text-4xl font-black uppercase tracking-[0.06em] text-[#fdfcf0] md:text-5xl">
+            AVPC
+
             & CO LLP
           </div>
-          <p className="mt-8 font-[var(--font-heading)] text-[11px] uppercase tracking-[0.16em] text-[#fdfcf0]/60">
-            Pune / Kolhapur
+          <p className="mt-8 font-[var(--font-body)] text-[11px] font-semibold uppercase tracking-[0.18em] text-[#fdfcf0]/70">
+            Pune | Kolhapur
             <br />
             {new Date().getFullYear()} Regulated by ICAI
           </p>
         </div>
 
-        <div className="flex flex-col justify-between border border-white/20 p-8 transition-colors hover:bg-[#fdfcf0] hover:text-[#2b1a10]">
+        <div className="flex flex-col justify-between border border-white/20 bg-[rgba(255,255,255,0.05)] p-8 transition-colors hover:bg-[#fdfcf0] hover:text-[#2b1a10]">
           <p className="text-2xl font-bold">Ready to solidify your financial infrastructure?</p>
-          <div className="mt-8 space-y-2 font-[var(--font-heading)] text-xs uppercase tracking-[0.16em]">
+          <div className="mt-8 space-y-2 font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em]">
             <Link href="/initiate-consultation" className="block">
               Initiate Consultation
             </Link>
