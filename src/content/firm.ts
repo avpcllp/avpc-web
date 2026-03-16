@@ -210,7 +210,8 @@ export const offices: Office[] = [
       'Tathawade, Pimpri-Chinchwad,',
       'Pune, Maharashtra - 411 033'
     ],
-    phones: ['+ 91 9145522100', '+91 8329070657']
+    phones: ['+ 91 9145522100', '+91 8329070657'],
+    email: 'info@avpcllp.com'
   },
   {
     name: 'Branch Office',

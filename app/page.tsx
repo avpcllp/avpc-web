@@ -286,11 +286,6 @@ export default function Home() {
                     Email: <a href={`mailto:${office.email}`}>{office.email}</a>
                   </p>
                 ) : null}
-                {office.website ? (
-                  <p className="mt-2 font-[var(--font-body)] text-[12px] font-semibold uppercase tracking-[0.14em] text-[#6f3c20]">
-                    Website: <a href={`https://${office.website}`}>{office.website}</a>
-                  </p>
-                ) : null}
               </article>
             ))}
           </div>
@@ -314,9 +309,6 @@ export default function Home() {
         <div className="flex flex-col justify-between border border-white/20 bg-[rgba(255,255,255,0.05)] p-8 transition-colors hover:bg-[#fdfcf0] hover:text-[#2b1a10]">
           <p className="text-2xl font-bold">Ready to solidify your financial infrastructure?</p>
           <div className="mt-8 space-y-2 font-[var(--font-body)] text-xs font-semibold uppercase tracking-[0.16em]">
-            <Link href="/initiate-consultation" className="block">
-              Initiate Consultation
-            </Link>
             <Link href="/disclaimer" className="block">
               Disclaimer
             </Link>
